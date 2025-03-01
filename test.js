@@ -772,3 +772,109 @@ allPromise.then((res)=>{
 //  sum(10,20,5,50,40) 
 
 
+
+
+ 
+// let arr = [1,2,3,4,1,2,5]
+
+// function removeDuplicate(arr){
+//     let result = [];
+
+//     for(let i=0;i<arr.length;i++){
+//         let isDupli = false;
+//         for(let j=0;j<result.length;j++){
+//             if(arr[i]===result[j]){
+//                 isDupli = true;
+//                 break;
+//             }
+//         }
+//         if(isDupli==false){
+//             result.push(arr[i])
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(removeDuplicate(arr));
+
+
+
+// function findUnique(arr){
+    
+// let arunq =[]
+//     for(let i=0;i<arr.length;i++){
+//         let isUnq = true;
+//         for(let j=0;j<arr.length;j++){
+//             if(i !== j && arr[i] === arr[j]){
+//                 isUnq = false;
+//                 break;
+//             }
+//         }
+//         if(isUnq == true){
+//             // arunq.push(arr[i])
+//             return arr[i]
+            
+//         }
+//     }
+//     return arunq.length>0?arunq:-1;
+// }
+
+// console.log(findUnique(arr));
+
+
+
+// let arr = [2,3,4,5,6,1];
+
+
+// function secondLargest(arr){
+//     if(arr.length < 2) return 'not possible';
+
+//     let large = -1;
+//     let secondLarge = -1;
+
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i] > large){
+//             secondLarge = large;
+//             large = arr[i]
+//         }else if(arr[i] >secondLarge && arr[i] !== large){
+//             secondLarge = arr[i]
+//         }
+//     }
+//     return secondLarge === -1 ? "no sec lg ":secondLarge
+// }
+
+// console.log(secondLargest(arr));
+
+
+// let a = 2;
+// let b = 4;
+// let c = 1;
+
+
+// let res = ()=>{
+//     return (a>b)?(a>c?a:c):(b>c?b:c)
+// }
+
+// console.log(res());
+
+
+function sort(arr){
+
+
+    for(let i=0;i<arr.length;i++){
+        let temp ;
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[i]>arr[j]){
+                temp = arr[i];
+                arr[i]=arr[j];
+                arr[j] = temp;
+            }
+        }
+        
+    }
+    return arr
+
+}
+
+let arr = [2,3,1,4,5]
+console.log(sort(arr));
